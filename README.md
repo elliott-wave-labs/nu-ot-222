@@ -1,6 +1,8 @@
 # nu.ot.222
 
-Public Cursor / open-agent skill for Elliott’s weekly OT cadence:
+**OT = Out of Town** (rap slang). Not overtime.
+
+Public Cursor / open-agent skill for Elliott’s weekly Out of Town ship cadence:
 
 - **Thursday 2:00 pm** `America/Los_Angeles` — status update (chat + dated MD)
 - **Thursday 2:22 pm** local — hard ship cutoff
