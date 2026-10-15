@@ -2,8 +2,6 @@
 
 **OT = Out of Town** (rap slang). Not overtime.
 
-Public Cursor / open-agent skill for Elliott’s weekly Out of Town ship cadence.
-
 | Beat | Time (`America/Los_Angeles`) |
 | --- | --- |
 | Update + MD check-in | Thursday **2:00 pm** |
@@ -12,7 +10,7 @@ Public Cursor / open-agent skill for Elliott’s weekly Out of Town ship cadence
 By **2:22**: known fixes, web published, apps fixed, PRs reviewed and **auto-merged by the agent**, TestFlight, App Store submit (or human click instructions), beta, GitHub release, sideload install packages updated.
 
 Always write `nu.ot/YYYY-MM-DD.md`, commit, push (public in [khensu-specs](https://github.com/elliott-wave-labs/khensu-specs)).  
-Private App Store changelog stays gitignored — never paste it wholesale onto skills.agent.
+Private App Store changelog stays gitignored.
 
 ## Install
 
