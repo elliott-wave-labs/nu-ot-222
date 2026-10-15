@@ -1,9 +1,14 @@
-# nu.ot.deadlines
+# nu.ot.222
 
-Public Cursor / open-agent skill for Elliott’s weekly **Thursday 2:00 pm** `America/Los_Angeles` ship cutoff (nu.ot).
+Public Cursor / open-agent skill for Elliott’s weekly OT cadence:
 
-Install: copy `SKILL.md` into `.cursor/skills/nu-ot-deadlines/` or `~/.cursor/skills/nu-ot-deadlines/`.
+- **Thursday 2:00 pm** `America/Los_Angeles` — status update (chat + dated MD)
+- **Thursday 2:22 pm** local — hard ship cutoff
+- Always write `nu.ot/YYYY-MM-DD.md`, commit, push (public in khensu-specs)
+- Private App Store changelog stays gitignored — never on skills.agent
 
-Licence: CC BY 4.0 (same as khensu-specs).
+Install: copy `SKILL.md` into `.cursor/skills/nu-ot-222/` or `~/.cursor/skills/nu-ot-222/`.
 
-Live index: https://khensu.nu/skills-agent (host `skills.agent.khensu.nu` when DNS/SSL is live).
+Licence: CC BY 4.0.
+
+**skills.agent** publishes **nu-harness only**: https://khensu.nu/skills-agent

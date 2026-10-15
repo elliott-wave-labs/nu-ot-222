@@ -1,55 +1,66 @@
 ---
-name: nu-ot-deadlines
+name: nu-ot-222
 description: >-
-  Elliott’s weekly OT cutoff and shipping cadence for khėnsu.ñü. Use for every
-  personal ship, site publish, app install, Apple submit, and “finish before
-  deadline” request. Thursday 2:00 pm America/Los_Angeles is the hard weekly
-  cutoff (nu.ot). Pair with nu-harness and publishing-khensu-sites.
+  Elliott’s weekly OT cadence for khėnsu.ñü. Thursday 2:00 pm America/Los_Angeles
+  status update; hard ship cutoff 2:22 pm local. Always write a dated public MD,
+  check it in, publish. Private release changelog stays private. Use for every
+  personal ship, site publish, app install, Apple submit, and deadline request.
+  Pair with nu-harness (only skill on skills.agent).
 ---
 
-# nu.ot.deadlines
+# nu.ot.222
 
 Elliott’s personal operating tempo. Apply on **every** khėnsu task for him unless he says otherwise.
 
-## Hard weekly cutoff
+## Weekly clock (America/Los_Angeles)
 
-| Rule | Value |
-| --- | --- |
-| Cadence | Weekly |
-| Day | **Thursday** |
-| Clock | **2:00 pm** `America/Los_Angeles` (PDT/PST) |
-| Name | **nu.ot** |
-| Meaning | Ship what is ready by the cutoff. Do not stop working after the update. |
+| Beat | Time | What |
+| --- | --- | --- |
+| **Update** | Thursday **2:00 pm** | Status in chat + dated MD (what shipped, what’s open). |
+| **Cutoff** | Thursday **2:22 pm** local | Hard ship line. Land what’s ready. Keep building after. |
+| **Name** | **nu.ot.222** | Echoes the 2:22 dead-man’s switch activation. |
 
-At the cutoff:
+## Always: dated MD → commit → public
 
-1. Write a short status file **`nu.ot.YYY.md`** in `khensu-specs` (session number or clock: e.g. `nu.ot.222.md` for 2:22-style / session 222).
-2. Mirror the same bullets in the agent chat.
-3. Keep building after 2 pm — the file is a checkpoint, not a stop.
+Every Thursday (and any OT ship Elliott calls):
+
+1. Write **`nu.ot/YYYY-MM-DD.md`** in `khensu-specs` (ISO date in his local timezone).
+2. Also keep / refresh **`nu.ot.222.md`** as the rolling “this week” pointer (same content or a short link to the dated file).
+3. Mirror the bullets in the agent chat at **2:00 pm**.
+4. **`git add` + commit** those MDs in `khensu-specs` and **push** so they stay public.
+5. Keep building past **2:22 pm** — the MD is a checkpoint, not a stop.
+
+Filename examples: `nu.ot/2026-10-15.md`, pointer `nu.ot.222.md`.
+
+## Private release changelog
+
+- Maintain **`CHANGELOG.private.md`** only in places that stay **private** (gitignored under `khensu-apple/docs/` and/or Elliott’s personal store).
+- App Store / TestFlight release notes, review replies, and unreleased version notes go there — **never** on the public skills.agent site and **never** in public commit messages that dump the full private log.
+- Public `nu.ot/*.md` may say “ASC submit attempted / build N” without private reviewer narrative.
 
 ## Priority when the clock is short
 
-1. **Sites live** — publish what is built (`publishing-khensu-sites` + `nu-harness`). Never hold for patents.
-2. **Apps on device** — Wi‑Fi install to the paired iPhone (`xcrun devicectl device install app`) before App Store.
-3. **Apple submit** — upload what is archive-ready before the cutoff; incomplete products stay in TestFlight / GitHub IPA.
-4. **Code** — land in public repos after handover; do not privatize.
-5. **New product hosts** — only after `dig +short HOST A` → `34.107.228.246`, then `own_certificate = true` (never shared pack on day one).
+1. **Sites live** — publish what is built (`publishing-khensu-sites` + `nu-harness`).
+2. **Apps on device** — Wi‑Fi install before App Store.
+3. **Apple submit** — upload archive-ready builds by **2:22**; incomplete stay GitHub IPA / TestFlight.
+4. **Code** — public repos stay public post-handover; do not privatize.
+5. **New hosts** — dig A → `34.107.228.246`, then `own_certificate = true`.
 
 ## Always
 
-- Commands for agents/nodes: `~`, never `/`. Flags stay `-`.
-- Publish tech and sites; source stays public post–founder handover (`OPEN-SOURCE.md`). Do not reverse that.
-- Display names: people see khėnsu.ñü / ñü.ŵævẽš / …; code and hosts stay ASCII.
-- Tips 100% to the person; app commerce flat 10%.
+- Commands: `~`, never `/`. Flags: `-`.
+- **skills.agent** publishes **nu-harness only**. This skill is for Elliott’s cadence; public OT MDs live in khensu-specs.
+- Display names: people see the marks; code/hosts stay ASCII.
 
 ## Do not
 
-- Miss the Thursday 2 pm update file when Elliott called a weekly ship.
-- Block the cutoff waiting on perfect parity (moments = full Reels/Templify, music theory, etc.) — ship the slice that works, note the rest in `nu.ot.*.md`.
+- Miss the Thursday **2:00 pm** update or the **2:22 pm** dated MD + commit.
+- Put private release changelog text on skills.agent or in public release notes wholesale.
+- Block the cutoff waiting on perfect parity — ship the slice, note the rest in the MD.
 - Add NXDOMAIN hosts to the shared products SSL pack.
 
 ## Companion
 
-- Live skills index (when DNS/SSL ready): `https://skills.agent.khensu.nu`
+- skills.agent (nu-harness only): https://khensu.nu/skills-agent
+- Skill repo (public): https://github.com/elliott-wave-labs/nu-ot-222
 - Harness: `nu-harness` · `nu.harness.md`
-- Work log: `khensu-work-log` · `work-completed.md` / `work-ip.md`
